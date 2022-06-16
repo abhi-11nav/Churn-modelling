@@ -1,0 +1,72 @@
+ <!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+	<meta charset = "UTF=8">
+	<title> CHURN MODEL </title>
+	</style>
+</head>
+
+<body>
+	<div class="login">
+		<h1> CHURN PREDICTION MODEL  </h1>
+		<form action="{{ url_for('predict')}}"method="post">
+
+			<label for="geography">GEOGRAPHY</label>
+			<select class="features" name="geography" id="geography" required="required">
+			<option value="france">FRANCE</option>
+			<option value="spain">SPAIN</option>
+			<option value="germany">GERMANY</option>
+			</select>
+
+			<br>
+
+			<label for="gender">GENDER</label>
+			<select class="features" name="gender" id="gender" required="required">
+			<option value="male">MALE</option>
+			<option value="Female">FEMALE</option>
+			</select>
+
+			<br>
+
+			<label for="credit_card">CREDIT CARD</label>
+			<select class="features" name="credit_card" id="credit_card" required="required">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+			</select>
+			
+			<br>
+
+			<label for="active_member">ACTIVE MEMBER</label>
+			<select class="features" name="active_member" id="active_member" required="required">
+			<option value="yes">YES</option>
+			<option value="no">NO</option>
+			</select>
+
+			<br>
+
+
+    		<input class="features" type="number" name="credit_score" placeholder="credit_score" required="required"/><br>
+        	<input class="features" type="number" name="age" placeholder="Age" required="required"/><br>
+        	<input class="features" type="number" name="Tenure" placeholder="Tenure" required="required"/><br>
+			<input class="features" type="number" inputmode="decimal" name="balance" placeholder="balance" required="required"/><br>
+			<input class="features" type="number" name="no_of_products" placeholder="number_of_products" required="required"/>	
+			
+			<br>
+
+
+        	<button type="SUBMIT" class="btn btn-primary btn-block btn-large">predict</button>
+    	</form>
+
+  		 <br>
+   		<br>
+   		
+   		<div id="prediction_text">
+   		{{ prediction_text }}
+   		</div>
+
+ 	</div>
+
+</body>
+</html> 
+</body>
