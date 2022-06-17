@@ -102,7 +102,6 @@ grpcio==1.46.3
 gspread==3.4.2
 gspread-dataframe==3.0.8
 gym==0.17.3
-h5py==3.1.0
 HeapDict==1.0.1
 hijri-converter==2.2.4
 holidays==0.10.5.2
